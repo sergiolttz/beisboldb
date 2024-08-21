@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Béisbol Venezolano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="img/logo.png" class="logo">
+            <h1> Base de datos del beisbol venezolano</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Crear usuario</h2>
+            <section class="tarjeta-container">
+                <div class="tarjeta">
+                    <form method="post" action="crear_usuario.php" onsubmit="return validarFormulario()">
+                        <label for="nombre_usuario">Nombre de usuario:</label>
+                        <input type="text" id="nombre_usuario" name="nombre_usuario" required>
+
+                        <label for="nivel_permiso">Nivel de permiso:</label>
+                        <select name="nivel_permiso" id="nivel_permiso" name="nivel_permiso" required>
+                            <option value="1">Usuario básico</option>
+                            <option value="2">Mantenimiento</option>
+                            <option value="3">Administrador</option>
+                        </select>
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <label for="confirm_password">Confirmar contraseña:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+
+                        <div class="button-container">
+                            <div class="elemento-izquierda elemento-izquierda-texto">
+                                <img src="img/insertar_jugador.jpg" width="40" height="40">
+                                <button type="submit" name="" value="crear_usuario">Crear usuario</button>
+                            </div>
+                            <div class="elemento-izquierda elemento-izquierda-texto">
+                                <img src="img/atras.jpg" width="40" height="40">
+                                <a href="index.php"><button type="button">Volver</button></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Béisbol Venezolano</p>
+        </div>
+    </footer>
+</body>
+
+</html>
